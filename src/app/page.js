@@ -1,12 +1,11 @@
-import { assets } from "@/Assets/assets";
-import Header from "../components/header";
-import Image from "next/image";
-
+"use client"
+import Header from "../components/Header";
+import BlogList from "@/components/BlogList";
 export default function Home() {
   return (
     <>
       <Header />
-
+      <BlogList />
     </>
   );
 }
