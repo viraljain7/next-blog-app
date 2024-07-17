@@ -14,7 +14,7 @@ LoadDB()
 
 export async function GET(request) {
     console.log('GET Method');
-    const blogs = BlogModel.find({})
+    const blogs = await BlogModel.find({})
     return NextResponse.json({ blogs })
 }
 

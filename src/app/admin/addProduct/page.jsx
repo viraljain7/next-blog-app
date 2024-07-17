@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client"
 import { assets } from '@/Assets/assets'
 import axios from 'axios'
