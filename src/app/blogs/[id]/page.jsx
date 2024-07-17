@@ -1,21 +1,20 @@
 "use client"
-import { assets, blog_data } from '@/Assets/assets';
+import { assets } from '@/Assets/assets';
 import Footer from '@/components/Footer';
+import axios from 'axios';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 const page = ({ params }) => {
-    const [data, setData] = useState();
+    const [data, setData] = useState(null);
 
-    const fetchBlogData = () => {
-        for (let index = 0; index < blog_data.length; index++) {
-            if (Number(params.id) === blog_data[index].id) {
-                setData(blog_data[index])
-                console.log('>> ', blog_data[index])
-                break;
+    const fetchBlogData = async () => {
+        const response = await axios.get("/api/blog", {
+            params: {
+                id: params.id
             }
-        }
-
+        })
+        setData(response.data)
     }
 
     useEffect(() => {
@@ -35,7 +34,7 @@ const page = ({ params }) => {
                     <h1 className='text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto '>
                         {data.title}
                     </h1>
-                    <Image className='mx-auto mt-6 border border-white rounded-full' src={data.author_img} width={60} height={60} alt="authorImg" />
+                    <Image className='mx-auto mt-6 border border-white rounded-full' src={data.authorImg} width={60} height={60} alt="authorImg" />
                     <p className='mt-1 pb-2 text-lg max-w-[740px] mx-auto'>{data.author}</p>
                 </div>
             </div>

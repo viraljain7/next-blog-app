@@ -6,37 +6,31 @@ const blogSchema = new Schema({
     title: {
         type: String,
         required: true,
-        lowercase: true,
         trim: true,
     },
     description: {
         type: String,
         required: true,
-        lowercase: true,
         trim: true,
     },
     category: {
         type: String,
         required: true,
-        lowercase: true,
         trim: true,
     },
     author: {
         type: String,
         required: true,
-        lowercase: true,
         trim: true,
     },
     image: {
         type: String,
         required: true,
-        lowercase: true,
         trim: true,
     },
     authorImg: {
         type: String,
         required: true,
-        lowercase: true,
         trim: true,
     },
     date: {
