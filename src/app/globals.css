@@ -9,6 +9,19 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Number of lines to show before truncating */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
