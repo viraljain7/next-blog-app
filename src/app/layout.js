@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+import { Weight } from "lucide-react";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"], Weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={outfit.className}>{children}</body>
     </html>
   );
 }

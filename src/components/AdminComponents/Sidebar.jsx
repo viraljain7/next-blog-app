@@ -12,17 +12,24 @@ const Sidebar = () => {
             <div className='w-28 sm:w-80 h-[100vh] relative py-12 border border-black'>
 
                 <div className="absolute right-0 w-[50%] sm:w-[80%]">
-                    <Link href={'/admin/addProduct'} className='flex items-center gap-3 font-medium px-3   bg-white shadow-[-5px_5px_0px_#000] py-2 border border-black'>
+                    <Link href={'/admin/addProduct'} className='flex items-center gap-3 font-medium px-3   bg-white shadow-[-5px_5px_0px_#000] py-2 border border-black '>
                         <Image src={assets.add_icon} alt='blog' width={28} />
-                        Add Blogs
+                        <p className='hidden sm:block'>
+                            Add Blogs
+                        </p>
                     </Link>
                     <Link href={'/admin/blogList'} className='mt-5 flex items-center gap-3 font-medium px-3 bg-white shadow-[-5px_5px_0px_#000] py-2 border border-black'>
                         <Image src={assets.blog_icon} alt='blog' width={28} />
-                        Blogs lists
+                        <p className='hidden sm:block'>
+                            Blogs lists
+                        </p>
                     </Link>
-                    <Link href={'/admin/subscriptions'} className='mt-5 flex items-center gap-3 font-medium px-3 bg-white shadow-[-5px_5px_0px_#000] py-2 border border-black'>
+                    <Link href={'/admin/subscriptions'} className='mt-5 flex items-center gap-3 font-medium px-3 bg-white shadow-[-5px_5px_0px_#000] py-2 border border-black '>
                         <Image src={assets.email_icon} alt='blog' width={28} />
-                        Subscriptions
+                        <p className='hidden sm:block'>
+                            Subscriptions
+                        </p>
+
                     </Link>
                 </div>
             </div>
