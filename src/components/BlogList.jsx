@@ -18,7 +18,7 @@ const BlogList = () => {
     }
     useEffect(() => {
         fetchBlogs()
-    }, [])
+    }, [blogs])
 
 
     return (
