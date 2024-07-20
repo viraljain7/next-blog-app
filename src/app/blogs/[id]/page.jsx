@@ -3,6 +3,7 @@ import { assets } from '@/Assets/assets';
 import Footer from '@/components/Footer';
 import axios from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const page = ({ params }) => {
@@ -26,9 +27,11 @@ const page = ({ params }) => {
             <div className=" p-5 md:px-12 lg:px-28  bg-slate-200/65">
                 <div className="flex justify-between items-center">
                     <Image src={assets.logo} width={180} alt="logo" className="w-[130px] sm:w-auto" />
-                    <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-black border-solid shadow-[-7px_7px_0px_#000]">
-                        Get started <Image src={assets.arrow} alt="arrow logo" />
-                    </button>
+                    <Link href={'/admin'}>
+                        <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-black border-solid shadow-[-7px_7px_0px_#000]">
+                            Get started <Image src={assets.arrow} alt="arrow logo" />
+                        </button>
+                    </Link>
                 </div>
                 <div className='text-center my-24'>
                     <h1 className='text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto '>
